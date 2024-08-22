@@ -103,41 +103,254 @@ section img {
     width: 30%;
 }
 
-#beneficios {
+/* #beneficios {
     display: flex;
     align-items: center;
+    position: relative;
+    background-color: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
-#beneficios img {
+#beneficios .background-img {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 20%;
-    height: auto;
-    margin-right: 20px;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
 
 #beneficios .content {
+    position: relative;
     width: 80%;
+    padding-left: 22%;
+    z-index: 2;
 }
 
-.benefits-grid {
+#beneficios h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+#beneficios .logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.benefits-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 
-.benefits-grid div {
-    width: 45%;
-    margin: 2.5%;
+.benefit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    width: 70%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
 }
 
-.benefits-grid .wide {
-    width: 95%;
-    margin: 2.5%;
+.benefit img {
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute; 
+    right: 0px;
+    top: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
+
+.benefit:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.benefit .text-content {
+    width: 75%;
+    text-align: left;
+}
+
+.benefit h3 {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.benefit p {
+    color: #ddd;
+    margin: 10;
+    line-height: 1.4;
+} */
+
+#beneficios {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+#beneficios .background-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#beneficios .content {
+    position: relative;
+    width: 80%;
+    padding-left: 22%;
+    z-index: 2;
+}
+
+#beneficios h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+#beneficios .logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.benefit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    width: 70%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.benefit img {
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.benefit:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.benefit .text-content {
+    width: 75%;
+    text-align: left;
+}
+
+.benefit h3 {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.benefit p {
+    color: #ddd;
+    margin: 10;
+    line-height: 1.4;
+}
+
+/* Responsiveness */
+
+
+@media (max-width: 992px) {
+    #beneficios h1 {
+        font-size: 1.8em;
+    }
+    .benefit img {
+        width: 25%;
+    }
+    #beneficios .content {
+        width: 100%;
+        padding-left: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    #beneficios {
+        flex-direction: column;
+    }
+    #beneficios .background-img {
+        width: 0%;
+        height: 200 0px;
+    }
+    #beneficios .content {
+        width: 95%;
+        padding-left: 0;
+    }
+    .benefit {
+        width: 100%;
+    }
+    .benefit img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    #beneficios h1 {
+        font-size: 1.5em;
+    }
+    .benefit h3 {
+        font-size: 1.1em;
+    }
+    .benefit {
+        padding: 10px;
+    }
+}
+
+
 
 footer {
     background-color: #222;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
 }
